@@ -21,9 +21,6 @@ MurMur gives Twitch streams a customizable animated mascot that reacts to indivi
 - [OBS setup](#obs-setup)
 - [Project layout](#project-layout)
 - [Limitations and next steps](#limitations-and-next-steps)
-- [Built with OpenAI Codex](#built-with-openai-codex)
-- [Team contributions](#team-contributions)
-- [License](#license)
 
 ## What works today
 
@@ -252,19 +249,3 @@ public/                       Logo and public assets
 - Dedicated Streamlabs configuration or verified Streamlabs compatibility.
 
 The JSON file store is intended for a single app/worker deployment with shared persistent storage. Replace it with a shared database before running multiple app instances. The project has no committed test suite or documented roadmap yet.
-
-## Built with OpenAI Codex
-
-MurMur was developed collaboratively with OpenAI Codex. The project code includes the mascot dashboard and onboarding, Twitch OAuth and EventSub worker, Extension Chat and PubSub endpoints, the TypeSafe/Groq chat pipeline, poll creation, local environment setup, and packaging workflows. The repository history begins with a consolidated initial commit, so it does not preserve earlier file-level authorship; no Codex session notes are included. The contributor mapping below must be verified before a hackathon submission; see [CODEX_CONTRIBUTIONS.md](CODEX_CONTRIBUTIONS.md).
-
-## Team contributions
-
-- Primary Codex account/session: **[NAME AND SESSION ID — verify]** — **[confirm contribution areas]**
-- Additional Codex account/session: **[NAME AND SESSION ID — verify]** — **[confirm contribution areas]**
-- Additional Codex account/session: **[NAME AND SESSION ID — verify]** — **[confirm contribution areas]**
-
-Do not attribute work to an account until its owner and session ID have been checked.
-
-## License
-
-There is no root-level license for the MurMur project yet, so no license is implied for the repository as a whole. The adapted mascot engine in `lib/bloub/` includes its own MIT license and attribution; see [lib/bloub/LICENSE](lib/bloub/LICENSE). Choose and add a project license before describing MurMur itself as open source.
