@@ -1,0 +1,11 @@
+.next/
+node_modules/
+out/
+build/
+public/twitch-extension/
+twitch-extension/build/
+.env*
+!.env.example
+.data/
+/artifacts/
+*.tsbuildinfo

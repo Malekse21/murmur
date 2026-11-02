@@ -1,0 +1,35 @@
+{
+  "name": "murmur",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "npm run extension:build",
+    "dev": "concurrently -k -n web,eventsub \"next dev --webpack\" \"tsx scripts/twitch-eventsub-worker.ts\"",
+    "prebuild": "npm run extension:build",
+    "build": "next build --webpack",
+    "start": "concurrently -k -n web,eventsub \"next start\" \"tsx scripts/twitch-eventsub-worker.ts\"",
+    "setup:env": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-env.ps1",
+    "worker": "tsx scripts/twitch-eventsub-worker.ts",
+    "extension:build": "node scripts/build-extension.mjs",
+    "extension:package": "npm run extension:build && powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-extension.ps1",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.7.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^10.0.6",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "16.4.3",
+    "typescript": "^5.0.0"
+  }
+}

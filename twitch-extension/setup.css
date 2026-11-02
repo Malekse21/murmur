@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+html, body { min-height: 100%; margin: 0; background: #090909; color: #ededed; font-family: Arial, sans-serif; }
+body { display: grid; place-items: center; padding: 28px; }
+main { width: min(100%, 640px); padding: 30px; border: 1px solid rgba(255,255,255,.16); background: #101010; }
+.eyebrow { color: #999; font: 11px ui-monospace, monospace; letter-spacing: .08em; }
+h1 { margin: 16px 0 10px; font-size: clamp(28px, 5vw, 42px); font-weight: 550; letter-spacing: -.04em; }
+p { color: #bdbdbd; font-size: 14px; line-height: 1.6; }
+a { display: inline-flex; gap: 8px; margin-top: 12px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.22); color: #ededed; text-decoration: none; font-size: 13px; }
+a:hover { border-color: #52a8ff; color: #52a8ff; }
